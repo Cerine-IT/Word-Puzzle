@@ -34,7 +34,6 @@ for (let l of allLetters) {
   letterBtn.className = "letter-btn";
   letterBtn.innerText = l;
 
-  // Add event listeners
   letterBtn.addEventListener("click", function () {
     if (currentAnswer.length >= answer.length) {
       return;
@@ -47,16 +46,14 @@ for (let l of allLetters) {
     slot.style.animation = "appear 0.2s ease-out";
     letterBtn.classList.add("used");
 
-    // Check game status
     if (currentAnswer === answer.toUpperCase()) {
-      playWinSound(); // Joue le son de victoire
+      playWinSound();
       animateWin();
     } else if (currentAnswer.length === answer.length) {
-      animateShake(); // Vibre les cases avant d'afficher "Try again :(" 
+      animateShake();
     }
   });
 
-  // Add it to the parent
   lettersContainer.append(letterBtn);
 }
 
