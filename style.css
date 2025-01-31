@@ -71,7 +71,7 @@ body {
 }
 
 .letter-btn {
-  background-color: #3d3d3d;/*#3d3d3d*/
+  background-color: #f3eaea;/*#3d3d3d*/
   color: blueviolet;
   border: none;
   padding: 2rem;/*1*/
@@ -122,6 +122,23 @@ body {
 
 #undo-btn:hover {
   background-color:#6a0dad;
+}
+
+#try-again-btn {
+  background-color: #282846;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transform: all 0.2s ease;
+  margin: 0.4rem auto;
+  display: block;
+}
+
+#try-again-btn:hover{
+  background-color: #a044F9;
 }
 
 @keyframes appear {
