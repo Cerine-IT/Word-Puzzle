@@ -46,14 +46,18 @@ for (let l of allLetters) {
     slot.style.animation = "appear 0.2s ease-out";
     letterBtn.classList.add("used");
 
+    // Check game status
     if (currentAnswer === answer.toUpperCase()) {
-      playWinSound();
+      playWinSound(); // Joue le son de victoire
       animateWin();
     } else if (currentAnswer.length === answer.length) {
+      playLoseSound();
+      animateLose();
       animateShake();
-    }
+  }
   });
 
+  // Add it to the parent
   lettersContainer.append(letterBtn);
 }
 
@@ -87,7 +91,7 @@ undoBtn.addEventListener("click", function () {
 });
 
 function playWinSound() {
-  const winSound = new Audio("win-sound.mp3");
+  const winSound = new Audio("youpi_correct.mp3");
   winSound.play();
 }
 
@@ -112,7 +116,35 @@ function animateShake() {
   slots.forEach(slot => {
     slot.style.animation = "shake 0.3s ease";
   });
-  setTimeout(() => {
+  /*setTimeout(() => {
     alert("Try again : (");
-  }, 400);
+  }, 400);*/
 }
+
+function playLoseSound(){
+  const loseSound= new Audio ("oups_try_again.mp3");
+  loseSound.play();
+}
+
+function animateLose() {
+  const slots = document.querySelectorAll(".slot");
+
+  slots.forEach((slot, index) => {
+    setTimeout(() => {
+      slot.style.backgroundColor = "#e74c3c"; 
+      slot.style.transform = "scale(1.2)";
+
+      setTimeout(() => {
+        slot.style.transform = "scale(1)";
+      }, 200);
+    }, index * 150);
+  });
+
+  setTimeout(() => {
+    document.querySelector("#try-again-btn").style.display = "block"; 
+  }, slots.length * 150 + 300);
+}
+
+document.querySelector("#try-again-btn").addEventListener("click", function() {
+  location.reload();
+});
