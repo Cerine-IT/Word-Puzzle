@@ -6,7 +6,7 @@ A fun interactive word puzzle game where players guess the missing word in a sen
 - Dynamic letter grid with shuffled letters.
 - Visual animations for correct and incorrect answers.
 - Sound effects for success and failure.
-- "Undo" button to remove the last selected letter.
+- "Return" button to remove the last selected letter.
 - "Try Again" button appears on incorrect attempts.
 
 ## How to Play 🕹️
@@ -21,6 +21,6 @@ A fun interactive word puzzle game where players guess the missing word in a sen
 - **JavaScript**: Game logic and interactions.
 
 ## Usage 🚀
-1. Copy & click on this link :
+1. Copy & paste this link into your web browser :
    ```sh
    https://cerine-it.github.io/Word-Puzzle/
