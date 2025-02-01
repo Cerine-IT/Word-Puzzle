@@ -20,7 +20,7 @@ A fun interactive word puzzle game where players guess the missing word in a sen
 - **CSS**: Styling and animations.
 - **JavaScript**: Game logic and interactions.
 
-## Installation & Usage 🚀
-1. Clone this repository:
+## Usage 🚀
+1. Copy & click on this link :
    ```sh
-   git clone https://github.com/yourusername/word-puzzle-game.git
+   https://cerine-it.github.io/Word-Puzzle/
